@@ -1,0 +1,25 @@
+@import "../../styles.sass"
+@import "src/app/app.component.sass"
+
+$activelinkcolor: #cedce4
+$unnactivelinkcolor: #8391a2
+$backgroundcolorsidebar: #313a46
+
+section
+    max-width: $width
+    height: 100vh
+    max-height: 100vh
+    background-color: $backgroundcolorsidebar
+
+#sidebarHeader
+    height: 100px
+
+a
+    text-decoration: none
+    color:$unnactivelinkcolor
+    line-height: 20px
+
+a:hover
+    color: $activelinkcolor
+    -webkit-transition: 0.5s
+

@@ -1,0 +1,40 @@
+<section id="sidebar">
+    <div id="sidebarHeader" class="container d-flex align-items-center justify-content-center" style="transform:rotate(0)">
+        <a href="" routerLink="" class="stretched-link">
+            <h2 class="text-light">
+                <fa-icon [icon]="bookOpen"></fa-icon>
+                Nome bacana
+            </h2>
+        </a>
+    </div>
+
+    <div id="sidebarBody">
+        <app-category categoryName = "Principal">
+            <app-button-exp optName="Pasta principal">
+                <a routerLink="home" #option>Home</a>
+                <a routerLink="index" #option>Index</a>
+            </app-button-exp>
+            <app-button-exp optName="Ecommerce">
+                <a routerLink="products" #option>Produtos</a>
+                <a routerLink="products-detalhes" #option>Detalhe dos produtos</a>
+                <app-button-exp optName="Email">
+                    <a routerLink="email-imbox" #option>Inbox</a>
+                    <a routerLink="emails-customers" #option>Ler emails</a>
+                </app-button-exp>
+            </app-button-exp>
+        </app-category>
+
+        <app-category categoryName = "Supimpa">
+            <app-button-exp optName="Legal">
+                <a routerLink="world" #option>Hello </a>
+            </app-button-exp>
+        </app-category>
+        <app-category categoryName = "Comunicação">
+
+            <app-button-exp optName="Legal">
+                <a routerLink="hello" #option>Hello world</a>
+                <a routerLink="world" #option>Hello </a>
+            </app-button-exp>
+        </app-category>
+    </div>
+</section>

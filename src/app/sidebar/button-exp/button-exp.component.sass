@@ -1,0 +1,29 @@
+@import "src/app/sidebar/sidebar.component.sass"
+
+ul, li
+    list-style: none
+
+
+#buttonHeader
+    cursor: pointer
+    padding: 0px
+    padding-right: 10px
+    color:$unnactivelinkcolor
+    
+
+    &:hover
+        color: $activelinkcolor
+        -webkit-transition: 0.5s
+
+#buttonHeader.active
+    color: $activelinkcolor 
+
+
+a
+    text-decoration: none
+    color:$unnactivelinkcolor
+    line-height: 20px
+
+a:hover
+    color: $activelinkcolor
+

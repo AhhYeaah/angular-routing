@@ -1,0 +1,22 @@
+<div id="buttonHeader" class="container d-flex  align-items-baseline justify-content-between" 
+(click)="isActive = !isActive" [class.active]="isActive">
+    <a> 
+        {{optName}}
+    </a>
+        <fa-icon [icon]="arrowClose" *ngIf="isActive" style="padding-right: 20px;"></fa-icon> 
+        <fa-icon [icon]="arrowOpen" *ngIf="!isActive" style="padding-right: 20px;"></fa-icon>
+</div>
+<div [hidden]="!isActive">
+    <ul>
+        <ng-container *ngIf="expList.length > 0">   
+            <li id="forExp" *ngFor="let element of expList._results">
+                <app-button-exp [instance]="element"></app-button-exp>
+            </li>
+        </ng-container>
+        <ng-container *ngIf="aList.length > 0">
+            <li id="forA" *ngFor="let element of aList">
+                <a routerLink="{{element.nativeElement.attributes.routerLink.nodeValue}}" #option>{{element.nativeElement.innerText}}</a>
+            </li>
+        </ng-container>
+    </ul>
+</div>
